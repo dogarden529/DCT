@@ -1,0 +1,637 @@
+
+<!doctype html>
+<html><head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   <title>DCT</title>
+   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&amp;subset=japanese">
+   <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+   <link rel="stylesheet" href="assets/css/Projects-Clean.css">
+   <link rel="stylesheet" href="assets/css/Projects-Horizontal.css">
+   <link rel="stylesheet" href="assets/css/styles.css">
+ </head>
+
+ <body style="background-image: url(&quot;assets/img/ヘッダー5.jpg&quot;);background-size: cover;background-repeat: no-repeat;background-position: center;height: 750px;font-family: 'Abril Fatface', cursive;">
+     <script type="text/javascript">
+    function formCheck() {
+      var flag = 0;
+
+      // 入力必須項目が入力されているかチェック
+      if (document.Form1.name.value == "") { // 名前が未入力の場合
+        flag = 1;
+        document.getElementById('notice-input-text-1').style.display = "block"; // 【名前を入力して下さい】を表示
+      } else { // 名前が入力済みの場合
+        document.getElementById('notice-input-text-1').style.display = "none"; // 【名前を入力して下さい】を非表示
+      }
+      if (document.Form1.email.value == "") { // 名前が未入力の場合
+        flag = 1;
+        document.getElementById('notice-input-text-2').style.display = "block"; // 【名前を入力して下さい】を表示
+      } else { // 名前が入力済みの場合
+        document.getElementById('notice-input-text-2').style.display = "none"; // 【名前を入力して下さい】を非表示
+      }
+      if (document.Form1.uni.value == "") { // 名前が未入力の場合
+        flag = 1;
+        document.getElementById('notice-input-text-3').style.display = "block"; // 【名前を入力して下さい】を表示
+      } else { // 名前が入力済みの場合
+        document.getElementById('notice-input-text-3').style.display = "none"; // 【名前を入力して下さい】を非表示
+      }
+      if (document.getElementById('f_text').value == "") { // コメントが未入力の場合
+        flag = 1;
+        document.getElementById('notice').style.display = "block"; // 【コメントを入力して下さい】を表示
+      } else { // コメントが入力済みの場合
+        document.getElementById('notice').style.display = "none"; // 【コメントを入力して下さい】を非表示
+      }
+
+
+      if (flag) { // 入力必須項目に未入力があった場合
+        window.alert('必須項目は全て入力して下さい。'); // アラートを表示
+        return false; // 送信中止
+      } else { // 入力必須項目が全て入力済みだった場合
+        return true; // 送信実行
+      }
+
+    }
+
+  </script>
+
+  <p class="text-center" style="background-position: center;background-size: cover;background-repeat: no-repeat;color: rgb(255,255,255);font-family: 'Abril Fatface', cursive;font-size: 40px;"><br><br><img src="assets/img/DCT_ロゴ.png" style="width: 280px;"><br><br>DCT Summit<br>2019 Autumn<br><br></p>
+  <div class="projects-horizontal"></div>
+  <div class="projects-clean"></div>
+  <div class="highlight-clean" style="background-color: #ECF0F1;">
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(0,0,0);font-size: 26px;font-family: 'Abril Fatface', cursive;"><img src="assets/img/途中画像3.jpg" style="width: 100%;"><br><br><strong>What is "DCT Summit"？</strong></p>
+        <p class="text-left" style="color: rgb(125,130,133);font-family: 'Sawarabi Gothic', sans-serif;">Dreams Come True Summit(以下、DCT Summit)は各業界トップの学生起業家が一堂に集まり、それぞれの展望や経営について語る、完全招待制のクローズドカンファレンスです。DCT Summitでは、各業界の次世代を担うリーダーたちと起業を志す学生の交流、起業を志す学生の支援など、次世代の起業家輩出・事業創生に注力しています。<br><br>※DCT Summitは完全招待制のため、招待された方のみご参加いただけるイベントになっております。</p>
+      </div>
+    </div>
+  </div>
+  <div class="highlight-clean" style="background-color: #212c37;">
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(255,255,255);font-size: 26px;font-family: 'Abril Fatface', cursive;">Features of DCT Summit<br></p>
+        <ul style="color: rgb(255,255,255);font-family: 'Sawarabi Gothic', sans-serif;">
+          <li>知識経験実績ゼロの学生の状態からどのように事業をおこして成功したのか、具体的な話を聞くことができる。<br><br></li>
+          <li>やりたいことを実現するために、どんなことをしたらいいかわかる。<br><br></li>
+          <li>クローズドで招待制なので、周囲の友達にバレずに差を付けることができる。<br><br></li>
+          <li>参加者限定！興味のある分野で活躍しているリーダーとしっかり1対1で話す時間がある。他に人が居ると質問しにくいことも聞くことができる。<br><br></li>
+          <li>なにか始めたいけど、何をしたらいいかわからない人はリーダーと一緒に活動するチャンスもある。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="highlight-clean" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(0,0,0);font-size: 28px;font-family: 'Abril Fatface', cursive;">All Projects</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(125,130,133);font-family: 'Sawarabi Gothic', sans-serif;">今回のプログラム内のプレゼンテーションやパネルディスカッションでお話ししていただく、学生起業家の皆さんを紹介します。<br><br></p>
+      </div>
+      <div class="row projects">
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/井上2.jpg" style="background-image: url(&quot;assets/img/井上2.jpg&quot;);"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Youth代表 井上悠　<br>明治大学4年生 起業家<br><br>大学一年生の頃に出資を受け、教育の分野で起業。その後は、文部科学省と都立高校の授業設計、高校生がキャリアについて考える100人規模のサマーキャンプの企画から実行までを一任されるなど教育の分野で幅広く活動している。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;font-size: 28px;">Youth<br></h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>日本の教育に革命を起こす</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>教育を軸に据えた夢を持つ人が、夢を実現する方法が分かる</li>
+                <li>日本の教育に革命を起こそうとする本気のメンバーのみで構成された環境</li>
+              </ul><img src="assets/img/2019_04_24_190424_0006.jpg" style="width: 100%;">
+              <p class="text-left description" style="font-family: 'Sawarabi Gothic', sans-serif;font-size: 16px;margin-top: 16px;">Youthは教育と経営を通じて夢の実現を目指す環境です。文部科学省などの外部機関やキャリア教育の最先端であるミネルバ大学などの海外大学とも連携し、本気のメンバーが教育を通じてやりたいことを叶えています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/金.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">CBT代表 金堯中　<br>日本歯科大学6年生 起業家<br><br>医療現場のずさんな現状を変えるべくCBTを創設。歯科医院の経営コンサルティング、歯科学生のための人生設計ツアーなどを実施。現在は政治家との関わりも持ちながら、政治の面からも日本の医療を変えていっている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Crinical Bussiness Training</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 19px;"><strong>世界の医療の最先端を開拓し続ける</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>どうすれば多忙な学生生活で様々なことに挑戦できるのか、現役の多忙な医療系学生に相談しながら活動できる</li>
+                <li>医療系学生に特有のキャリアについての心配がなくなる</li>
+              </ul><img src="assets/img/155197.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">経営×医療をテーマとして経営的な視点から、医療系学生のキャリア支援、学生・医療従事者の開業支援などを行っています。世界から医療系の学生が集まるスタディーツアー・カンファレンスなども行っています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/園木.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Earth代表 園木豪流　<br>獨協大学3年生 起業家<br><br>日本各地の動物愛護施設の視察や取材、動物愛護をテーマにした映画の上映会、動物愛護団体の代表を招いた講演会などを多数実施。NPO法人Tier Pflanzeを設立し、その後Earthを創設。Earthでは日本全国の動物愛護団体を取材するツアーの開催、動物愛護をテーマとしたメディアの運営などを行っている。<br></p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Earth</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>人間と地球が共存できる</strong><br><strong>世界を実現する</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>日本一個性的な異端児しかいない組織で、泥臭く社会問題の解決に本気で挑める</li>
+                <li>社会問題の解決と好きなことをかけ合わせて、夢を実現する方法が分かる</li>
+              </ul><img src="assets/img/スペシャリストの思い出アルバム_190809_0009.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">Earthでは社会問題の解決をテーマに活動しています。社会の問題を解決したいけど、生き方もやり方もわからないし、何も持っていない。でも、熱意とポテンシャルに溢れている！そんなメンバーのみを採用し、全員で様々な社会問題を解決しています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/原田口.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">The moment代表 原田口昂弘　<br>東海大学卒 起業家<br><br>LINE、AbemaTVに就職後に学生中から活動を続けているフリージャーナリストとして独立。現在は、自身の作った組織であるThe momentで起業家を育成しながら、自身も起業家 兼 フリージャーナリストとして活動中。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">The moment</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>残酷だけど美しいこの世界</strong><br><strong>そんな世界を1mm動かす</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>"伝える"ということをテーマに好きなことで生きていく方法が分かる</li>
+                <li>自分が好奇心を抱いていることを仕事にしたい人がどうすれば良いのかが分かる</li>
+              </ul><img src="assets/img/ダグチ×子供.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">The momentは"伝える"ことで、世界に衝撃を与え、化学反応を起こし、人生のターニングポイントを創出します。メンバーの好奇心を好奇心で終わらせず、それを伝えることで誰かを動かす原動力に、世界を動かす原動力に変えています。連携機関であるKansai Leader Projectへの視察なども定期的に行っています。<br></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="intro"></div>
+      <div class="row projects">
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/日吉.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Delight代表 日吉諒汰<br>日本大学4年生 起業家<br><br>過去には『ドラえもん』の作者とエンタメ事業の設立を経験。その後の大学3年時にDelightを設立。Delightではエンターテイメントを通じて人々に感動を与えることをテーマに「しくじり大学生」などの様々なエンタメサービスをリリースし、多数開催している。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Delight</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>感動で人生の分岐点を作る</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>マンガ、アニメ、スポーツなどのエンタメ領域でやりたいことを仕事にする方法が分かる</li>
+                <li>エンタメを通じて世界に感動を与えることを、本気で考えられる環境</li>
+              </ul><img src="assets/img/C9AA3B90-C9EB-4197-A359-A696FB43B0BA.jpg" style="width: 100%;height: 200px;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">Delightのテーマはエンタメと感動。エンタメと経営を通じて世界中に感動を与えることをビジョンに掲げ活動中。現在は首都圏内でシリーズ化した、エンタメ×キャリアをテーマとしたイベント「しくじり大学生」やスポーツ系イベントを定期開催しています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/西田2.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Flavor Canvas代表 西田裕<br>帝京大学卒 起業家<br><br>学生時代から食について強い関心を持ち、飲食店の集客システムの開発、野外での食フェスの立ち上げから実行を統括として経験。現在はFlavor Canvasを設立し、食を通じて自己実現を目指す学生のキャリアコンサルタントも行っている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Flavor Canvas</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>食を通じて人々を笑顔に</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>食をテーマにやりたいことを実現する方法が分かる</li>
+                <li>学生時代に数百人規模のイベントを統括した人から、直接起業支援が受けられる</li>
+              </ul><img src="assets/img/LP用写真_190809_0025.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">Flavor Canvasでは食を通じてやりたいことを叶える人が集まる組織です。食フェスの開催、アントニオ猪木が経営する会社と協賛してオーガニック食品を世に広めるイベントを開催するなど、メンバーそれぞれが食を通じて世の中に価値を与えています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/岩原.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">CXO代表 岩原悠人<br>成蹊大学卒 起業家 兼 経営コンサルタント<br><br>経営者一家に生まれ、幼いころから経営に関心を持つ。本人は大学4年時に事業をスタート。親族の倒産経験から、最強の経営参謀を輩出することをビジョンに掲げ、CXOを創設。現在は事業を続けながら経営コンサルタントとしての仕事も行っている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">CXO</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>最強の経営参謀を輩出する</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>起業家 兼 経営コンサルタントから直接体系的な経営を学べる</li>
+                <li>経営でやりたいことを実現するには、起業するにはどうすれば良いのかがわかる</li>
+              </ul><img src="assets/img/説明会.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">CXOは最強の経営参謀・経営者を輩出する事をビジョンに掲げた組織です。起業家 兼 コンサルタントの代表が、メンバーの事業立ち上げのコンサルティングを直接行い、それぞれが経営を手段としてやりたいことを実現するために活動しています。美容院の経営コンサルタントやエンタメ事業運営者などを輩出している。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/山内.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">TMM代表 山内崇寛<br>明海大学歯学部6年生<br><br>アート・予防医療をテーマとして大学4年時に事業を開始し、TMMを創設。TMMを通じて過去に、現代アーティストのプロデュース、メンタリストDaigoとのコラボイベントの開催、歯科医院の集客コンサルティングなどを行ってきている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">The Medical<br>Management</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>アートと予防医療で世界の</strong><br><strong>人々の健康を守る</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>アートなど、この時代に稼いでいくことが難しい分野で起業している人に直接アドバイスをもらえる</li>
+                <li>医療系学生だが、医療以外の道に進むことを考えている人がキャリアの相談をできる</li>
+              </ul><img src="assets/img/155166.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">TMMでは、アート・予防医療を軸に据えて将来仕事をしたい人を中心に構成されています。お金を稼ぎにくい分野でも稼げるように盤石な経営能力を身に着けていきます。これまでに飲食店の経営コンサルタントの輩出、病院でのサービスリリースなどを行っています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="color: #ECF0F1;background-color: #ECF0F1;">
+      <div class="intro">
+        <h2 class="text-center" style="color: rgb(0,0,0);font-size: 28px;padding-top: 28px;">プログラム概要</h2>
+        <p class="text-left" style="font-family: 'Sawarabi Gothic', sans-serif;">DCT Summitでは今回のサミットで主役となるリーダーの皆様や参加される方々に、より満足していただけるよう、以下の構成となっています。<br></p>
+      </div>
+      <div class="row projects">
+        <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/product-school-ypZHyD1TqP0-unsplash%20(1).jpg">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;padding-top: 8px;">Presentation</h3>
+          <p class="description" style="background-color: #57bcdb;color: rgb(255,255,255);padding-right: 14px;padding-left: 14px;font-family: 'Sawarabi Gothic', sans-serif;padding-top: 12px;padding-bottom: 14px;">全プロジェクトリーダーが自身の事業・業界のビジョンを語ります。ビジョンや目指す世界観が同じプロジェクトのリーダーと、後のDCT Matchの時間に交流することができます。<br></p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/パネルディスカッション.jpg">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;padding-top: 8px;">Panel Discussion</h3>
+          <p class="description" style="background-color: #57bcdb;color: rgb(255,255,255);padding-right: 14px;padding-left: 14px;font-family: 'Sawarabi Gothic', sans-serif;padding-top: 12px;padding-bottom: 14px;">やりたいことを事業化する具体的な方法や学生のうちから圧倒的に差をつけて成功する方法についての、リーダーの皆様によるディスカッションです。これを聞くことで、やりたいことを事業化するための具体的なステップが分かります。</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/AdobeStock_133190997.jpeg">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;padding-top: 8px;">DCT Match</h3>
+          <p class="description" style="background-color: #57bcdb;color: rgb(255,255,255);padding-right: 14px;padding-left: 14px;font-family: 'Sawarabi Gothic', sans-serif;padding-top: 12px;padding-bottom: 14px;">リーダー、参加者の皆様に自由に交流していただけます。既に多くのことを経験しているリーダーの皆様と、密にお話ししていただくことで、今後の活動方針を具体的に決定し、次の日からやりたい事の準備を始めることが可能になります。</p>
+        </div>
+      </div>
+    </div>
+    <div class="container front_entry" style="color: #ECF0F1;background-color: #212c37;">
+      <div class="intro">
+        <h2 class="text-center" style="color: rgb(255,255,255);font-size: 28px;padding-top: 28px;margin-bottom: 5px;">イベント概要</h2>
+        <p class="text-center" style="color: rgb(255,255,255);">DCT Summit 2019 Autumn</p>
+      </div>
+      <div class="row projects">
+        <div class="col-sm-6 col-lg-4 item">
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;font-family: 'Sawarabi Gothic', sans-serif;"><br><strong>開催日程</strong><br><br>2019/9/21(土) 18:00～22:00<br><br></p>
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>開催場所</strong><br><br>国立オリンピック記念<br>青少年総合センター<br><br></p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;"></h3>
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>参加方法</strong><br><br>完全招待制<br>(下記フォームよりご応募下さい。)<br><br></p>
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>参加費</strong><br><br>無料<br><br></p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item">
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>開催資格</strong><br><br>学生・社会人可<br><br>・経営に興味があるが何をしたらいいか分からない方<br>・やりたいことを叶えるために話を聞いてみたい方<br><br></p>
+        </div>
+      </div>
+    </div>
+    <div id="entry">
+      <h3>DCT Summit 2019 Autumn</h3>
+      <h4 class="orange_line">申し込みフォーム</h4>
+      <div class="contents">
+        <form name="Form1" action="#" method="post" id="formID" onsubmit="return formCheck()">
+          <input type="hidden" value="send" name="mode">
+          <dl>
+            <dt>名前 <span class="need">必須</span></dt>
+            <dd><input type="text" name="name" value="" id="f_name">
+              <p id="notice-input-text-1" style="display: none; color: red;"> 【名前を入力して下さい】</p>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>メールアドレス <span class="need">必須</span></dt>
+            <dd><input type="text" name="email" id="f_mail">
+              <p id="notice-input-text-2" style="display: none; color: red;"> 【メールアドレスを入力して下さい】</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>所属 <span class="need">必須</span></dt>
+            <dd><input type="text" name="uni" id="f_number">
+              <p id="notice-input-text-3" style="display: none; color: red;"> 【所属を入力して下さい】</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>意気込み <span class="need">必須</span></dt>
+            <dd>
+              <p id="notice" style="display: none; color: red;"> 【意気込みを入力して下さい】</p>
+              <p><textarea name="text" id="f_text" cols="30" rows="10" class="validate[required]" value="" style="height: 200px;"></textarea>
+              </p>
+            </dd>
+          </dl>
+          <input type="submit" name="btn_confirm" value="入力内容を確認する" id="f_submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+</body></html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   <title>DCT</title>
+   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&amp;subset=japanese">
+   <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+   <link rel="stylesheet" href="assets/css/Projects-Clean.css">
+   <link rel="stylesheet" href="assets/css/Projects-Horizontal.css">
+   <link rel="stylesheet" href="assets/css/styles.css">
+ </head>
+<body style="background-image: url(&quot;assets/img/ヘッダー5.jpg&quot;);background-size: cover;background-repeat: no-repeat;background-position: center;height: 750px;font-family: 'Abril Fatface', cursive;">
+     <script type="text/javascript">
+    function formCheck() {
+      var flag = 0;
+
+      // 入力必須項目が入力されているかチェック
+      if (document.Form1.name.value == "") { // 名前が未入力の場合
+        flag = 1;
+        document.getElementById('notice-input-text-1').style.display = "block"; // 【名前を入力して下さい】を表示
+      } else { // 名前が入力済みの場合
+        document.getElementById('notice-input-text-1').style.display = "none"; // 【名前を入力して下さい】を非表示
+      }
+      if (document.Form1.email.value == "") { // 名前が未入力の場合
+        flag = 1;
+        document.getElementById('notice-input-text-2').style.display = "block"; // 【名前を入力して下さい】を表示
+      } else { // 名前が入力済みの場合
+        document.getElementById('notice-input-text-2').style.display = "none"; // 【名前を入力して下さい】を非表示
+      }
+      if (document.Form1.uni.value == "") { // 名前が未入力の場合
+        flag = 1;
+        document.getElementById('notice-input-text-3').style.display = "block"; // 【名前を入力して下さい】を表示
+      } else { // 名前が入力済みの場合
+        document.getElementById('notice-input-text-3').style.display = "none"; // 【名前を入力して下さい】を非表示
+      }
+      if (document.getElementById('f_text').value == "") { // コメントが未入力の場合
+        flag = 1;
+        document.getElementById('notice').style.display = "block"; // 【コメントを入力して下さい】を表示
+      } else { // コメントが入力済みの場合
+        document.getElementById('notice').style.display = "none"; // 【コメントを入力して下さい】を非表示
+      }
+
+
+      if (flag) { // 入力必須項目に未入力があった場合
+        window.alert('必須項目は全て入力して下さい。'); // アラートを表示
+        return false; // 送信中止
+      } else { // 入力必須項目が全て入力済みだった場合
+        return true; // 送信実行
+      }
+
+    }
+
+  </script>
+
+  <p class="text-center" style="background-position: center;background-size: cover;background-repeat: no-repeat;color: rgb(255,255,255);font-family: 'Abril Fatface', cursive;font-size: 40px;"><br><br><img src="assets/img/DCT_ロゴ.png" style="width: 280px;"><br><br>DCT Summit<br>2019 Autumn<br><br></p>
+  <div class="projects-horizontal"></div>
+  <div class="projects-clean"></div>
+  <div class="highlight-clean" style="background-color: #ECF0F1;">
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(0,0,0);font-size: 26px;font-family: 'Abril Fatface', cursive;"><img src="assets/img/途中画像3.jpg" style="width: 100%;"><br><br><strong>What is "DCT Summit"？</strong></p>
+        <p class="text-left" style="color: rgb(125,130,133);font-family: 'Sawarabi Gothic', sans-serif;">Dreams Come True Summit(以下、DCT Summit)は各業界トップの学生起業家が一堂に集まり、それぞれの展望や経営について語る、完全招待制のクローズドカンファレンスです。DCT Summitでは、各業界の次世代を担うリーダーたちと起業を志す学生の交流、起業を志す学生の支援など、次世代の起業家輩出・事業創生に注力しています。<br><br>※DCT Summitは完全招待制のため、招待された方のみご参加いただけるイベントになっております。</p>
+      </div>
+    </div>
+  </div>
+  <div class="highlight-clean" style="background-color: #212c37;">
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(255,255,255);font-size: 26px;font-family: 'Abril Fatface', cursive;">Features of DCT Summit<br></p>
+        <ul style="color: rgb(255,255,255);font-family: 'Sawarabi Gothic', sans-serif;">
+          <li>知識経験実績ゼロの学生の状態からどのように事業をおこして成功したのか、具体的な話を聞くことができる。<br><br></li>
+          <li>やりたいことを実現するために、どんなことをしたらいいかわかる。<br><br></li>
+          <li>クローズドで招待制なので、周囲の友達にバレずに差を付けることができる。<br><br></li>
+          <li>参加者限定！興味のある分野で活躍しているリーダーとしっかり1対1で話す時間がある。他に人が居ると質問しにくいことも聞くことができる。<br><br></li>
+          <li>なにか始めたいけど、何をしたらいいかわからない人はリーダーと一緒に活動するチャンスもある。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="highlight-clean" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(0,0,0);font-size: 28px;font-family: 'Abril Fatface', cursive;">All Projects</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="intro">
+        <p class="text-center" style="color: rgb(125,130,133);font-family: 'Sawarabi Gothic', sans-serif;">今回のプログラム内のプレゼンテーションやパネルディスカッションでお話ししていただく、学生起業家の皆さんを紹介します。<br><br></p>
+      </div>
+      <div class="row projects">
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/井上2.jpg" style="background-image: url(&quot;assets/img/井上2.jpg&quot;);"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Youth代表 井上悠　<br>明治大学4年生 起業家<br><br>大学一年生の頃に出資を受け、教育の分野で起業。その後は、文部科学省と都立高校の授業設計、高校生がキャリアについて考える100人規模のサマーキャンプの企画から実行までを一任されるなど教育の分野で幅広く活動している。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;font-size: 28px;">Youth<br></h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>日本の教育に革命を起こす</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>教育を軸に据えた夢を持つ人が、夢を実現する方法が分かる</li>
+                <li>日本の教育に革命を起こそうとする本気のメンバーのみで構成された環境</li>
+              </ul><img src="assets/img/2019_04_24_190424_0006.jpg" style="width: 100%;">
+              <p class="text-left description" style="font-family: 'Sawarabi Gothic', sans-serif;font-size: 16px;margin-top: 16px;">Youthは教育と経営を通じて夢の実現を目指す環境です。文部科学省などの外部機関やキャリア教育の最先端であるミネルバ大学などの海外大学とも連携し、本気のメンバーが教育を通じてやりたいことを叶えています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/金.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">CBT代表 金堯中　<br>日本歯科大学6年生 起業家<br><br>医療現場のずさんな現状を変えるべくCBTを創設。歯科医院の経営コンサルティング、歯科学生のための人生設計ツアーなどを実施。現在は政治家との関わりも持ちながら、政治の面からも日本の医療を変えていっている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Crinical Bussiness Training</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 19px;"><strong>世界の医療の最先端を開拓し続ける</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>どうすれば多忙な学生生活で様々なことに挑戦できるのか、現役の多忙な医療系学生に相談しながら活動できる</li>
+                <li>医療系学生に特有のキャリアについての心配がなくなる</li>
+              </ul><img src="assets/img/155197.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">経営×医療をテーマとして経営的な視点から、医療系学生のキャリア支援、学生・医療従事者の開業支援などを行っています。世界から医療系の学生が集まるスタディーツアー・カンファレンスなども行っています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/園木.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Earth代表 園木豪流　<br>獨協大学3年生 起業家<br><br>日本各地の動物愛護施設の視察や取材、動物愛護をテーマにした映画の上映会、動物愛護団体の代表を招いた講演会などを多数実施。NPO法人Tier Pflanzeを設立し、その後Earthを創設。Earthでは日本全国の動物愛護団体を取材するツアーの開催、動物愛護をテーマとしたメディアの運営などを行っている。<br></p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Earth</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>人間と地球が共存できる</strong><br><strong>世界を実現する</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>日本一個性的な異端児しかいない組織で、泥臭く社会問題の解決に本気で挑める</li>
+                <li>社会問題の解決と好きなことをかけ合わせて、夢を実現する方法が分かる</li>
+              </ul><img src="assets/img/スペシャリストの思い出アルバム_190809_0009.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">Earthでは社会問題の解決をテーマに活動しています。社会の問題を解決したいけど、生き方もやり方もわからないし、何も持っていない。でも、熱意とポテンシャルに溢れている！そんなメンバーのみを採用し、全員で様々な社会問題を解決しています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/原田口.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">The moment代表 原田口昂弘　<br>東海大学卒 起業家<br><br>LINE、AbemaTVに就職後に学生中から活動を続けているフリージャーナリストとして独立。現在は、自身の作った組織であるThe momentで起業家を育成しながら、自身も起業家 兼 フリージャーナリストとして活動中。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">The moment</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>残酷だけど美しいこの世界</strong><br><strong>そんな世界を1mm動かす</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>"伝える"ということをテーマに好きなことで生きていく方法が分かる</li>
+                <li>自分が好奇心を抱いていることを仕事にしたい人がどうすれば良いのかが分かる</li>
+              </ul><img src="assets/img/ダグチ×子供.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">The momentは"伝える"ことで、世界に衝撃を与え、化学反応を起こし、人生のターニングポイントを創出します。メンバーの好奇心を好奇心で終わらせず、それを伝えることで誰かを動かす原動力に、世界を動かす原動力に変えています。連携機関であるKansai Leader Projectへの視察なども定期的に行っています。<br></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="intro"></div>
+      <div class="row projects">
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/日吉.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Delight代表 日吉諒汰<br>日本大学4年生 起業家<br><br>過去には『ドラえもん』の作者とエンタメ事業の設立を経験。その後の大学3年時にDelightを設立。Delightではエンターテイメントを通じて人々に感動を与えることをテーマに「しくじり大学生」などの様々なエンタメサービスをリリースし、多数開催している。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Delight</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>感動で人生の分岐点を作る</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>マンガ、アニメ、スポーツなどのエンタメ領域でやりたいことを仕事にする方法が分かる</li>
+                <li>エンタメを通じて世界に感動を与えることを、本気で考えられる環境</li>
+              </ul><img src="assets/img/C9AA3B90-C9EB-4197-A359-A696FB43B0BA.jpg" style="width: 100%;height: 200px;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">Delightのテーマはエンタメと感動。エンタメと経営を通じて世界中に感動を与えることをビジョンに掲げ活動中。現在は首都圏内でシリーズ化した、エンタメ×キャリアをテーマとしたイベント「しくじり大学生」やスポーツ系イベントを定期開催しています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/西田2.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">Flavor Canvas代表 西田裕<br>帝京大学卒 起業家<br><br>学生時代から食について強い関心を持ち、飲食店の集客システムの開発、野外での食フェスの立ち上げから実行を統括として経験。現在はFlavor Canvasを設立し、食を通じて自己実現を目指す学生のキャリアコンサルタントも行っている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">Flavor Canvas</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>食を通じて人々を笑顔に</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>食をテーマにやりたいことを実現する方法が分かる</li>
+                <li>学生時代に数百人規模のイベントを統括した人から、直接起業支援が受けられる</li>
+              </ul><img src="assets/img/LP用写真_190809_0025.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">Flavor Canvasでは食を通じてやりたいことを叶える人が集まる組織です。食フェスの開催、アントニオ猪木が経営する会社と協賛してオーガニック食品を世に広めるイベントを開催するなど、メンバーそれぞれが食を通じて世の中に価値を与えています。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/岩原.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">CXO代表 岩原悠人<br>成蹊大学卒 起業家 兼 経営コンサルタント<br><br>経営者一家に生まれ、幼いころから経営に関心を持つ。本人は大学4年時に事業をスタート。親族の倒産経験から、最強の経営参謀を輩出することをビジョンに掲げ、CXOを創設。現在は事業を続けながら経営コンサルタントとしての仕事も行っている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">CXO</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>最強の経営参謀を輩出する</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>起業家 兼 経営コンサルタントから直接体系的な経営を学べる</li>
+                <li>経営でやりたいことを実現するには、起業するにはどうすれば良いのかがわかる</li>
+              </ul><img src="assets/img/説明会.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">CXOは最強の経営参謀・経営者を輩出する事をビジョンに掲げた組織です。起業家 兼 コンサルタントの代表が、メンバーの事業立ち上げのコンサルティングを直接行い、それぞれが経営を手段としてやりたいことを実現するために活動しています。美容院の経営コンサルタントやエンタメ事業運営者などを輩出している。<br><br></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 item">
+          <div class="row">
+            <div class="col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/山内.jpg"></a>
+              <p style="font-family: 'Sawarabi Gothic', sans-serif;">TMM代表 山内崇寛<br>明海大学歯学部6年生<br><br>アート・予防医療をテーマとして大学4年時に事業を開始し、TMMを創設。TMMを通じて過去に、現代アーティストのプロデュース、メンタリストDaigoとのコラボイベントの開催、歯科医院の集客コンサルティングなどを行ってきている。</p>
+            </div>
+            <div class="col">
+              <h3 class="text-center name" style="font-family: 'Abril Fatface', cursive;">The Medical<br>Management</h3>
+              <h3 class="text-center name" style="font-family: 'Sawarabi Mincho', sans-serif;font-size: 20px;"><strong>アートと予防医療で世界の</strong><br><strong>人々の健康を守る</strong></h3>
+              <ul style="font-family: 'Sawarabi Gothic', sans-serif;color: rgb(125,130,133);">
+                <li>アートなど、この時代に稼いでいくことが難しい分野で起業している人に直接アドバイスをもらえる</li>
+                <li>医療系学生だが、医療以外の道に進むことを考えている人がキャリアの相談をできる</li>
+              </ul><img src="assets/img/155166.jpg" style="width: 100%;">
+              <p class="text-left description" style="margin-top: 16px;font-family: 'Sawarabi Gothic', sans-serif;">TMMでは、アート・予防医療を軸に据えて将来仕事をしたい人を中心に構成されています。お金を稼ぎにくい分野でも稼げるように盤石な経営能力を身に着けていきます。これまでに飲食店の経営コンサルタントの輩出、病院でのサービスリリースなどを行っています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="color: #ECF0F1;background-color: #ECF0F1;">
+      <div class="intro">
+        <h2 class="text-center" style="color: rgb(0,0,0);font-size: 28px;padding-top: 28px;">プログラム概要</h2>
+        <p class="text-left" style="font-family: 'Sawarabi Gothic', sans-serif;">DCT Summitでは今回のサミットで主役となるリーダーの皆様や参加される方々に、より満足していただけるよう、以下の構成となっています。<br></p>
+      </div>
+      <div class="row projects">
+        <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/product-school-ypZHyD1TqP0-unsplash%20(1).jpg">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;padding-top: 8px;">Presentation</h3>
+          <p class="description" style="background-color: #57bcdb;color: rgb(255,255,255);padding-right: 14px;padding-left: 14px;font-family: 'Sawarabi Gothic', sans-serif;padding-top: 12px;padding-bottom: 14px;">全プロジェクトリーダーが自身の事業・業界のビジョンを語ります。ビジョンや目指す世界観が同じプロジェクトのリーダーと、後のDCT Matchの時間に交流することができます。<br></p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/パネルディスカッション.jpg">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;padding-top: 8px;">Panel Discussion</h3>
+          <p class="description" style="background-color: #57bcdb;color: rgb(255,255,255);padding-right: 14px;padding-left: 14px;font-family: 'Sawarabi Gothic', sans-serif;padding-top: 12px;padding-bottom: 14px;">やりたいことを事業化する具体的な方法や学生のうちから圧倒的に差をつけて成功する方法についての、リーダーの皆様によるディスカッションです。これを聞くことで、やりたいことを事業化するための具体的なステップが分かります。</p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item"><img class="img-fluid" src="assets/img/AdobeStock_133190997.jpeg">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;padding-top: 8px;">DCT Match</h3>
+          <p class="description" style="background-color: #57bcdb;color: rgb(255,255,255);padding-right: 14px;padding-left: 14px;font-family: 'Sawarabi Gothic', sans-serif;padding-top: 12px;padding-bottom: 14px;">リーダー、参加者の皆様に自由に交流していただけます。既に多くのことを経験しているリーダーの皆様と、密にお話ししていただくことで、今後の活動方針を具体的に決定し、次の日からやりたい事の準備を始めることが可能になります。</p>
+        </div>
+      </div>
+    </div>
+    <div class="container front_entry" style="color: #ECF0F1;background-color: #212c37;">
+      <div class="intro">
+        <h2 class="text-center" style="color: rgb(255,255,255);font-size: 28px;padding-top: 28px;margin-bottom: 5px;">イベント概要</h2>
+        <p class="text-center" style="color: rgb(255,255,255);">DCT Summit 2019 Autumn</p>
+      </div>
+      <div class="row projects">
+        <div class="col-sm-6 col-lg-4 item">
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;font-family: 'Sawarabi Gothic', sans-serif;"><br><strong>開催日程</strong><br><br>2019/9/21(土) 18:00～22:00<br><br></p>
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>開催場所</strong><br><br>国立オリンピック記念<br>青少年総合センター<br><br></p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item">
+          <h3 class="text-center name" style="color: rgb(255,255,255);margin-bottom: 0px;background-color: #57bcdb;font-size: 20px;"></h3>
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>参加方法</strong><br><br>完全招待制<br>(下記フォームよりご応募下さい。)<br><br></p>
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>参加費</strong><br><br>無料<br><br></p>
+        </div>
+        <div class="col-sm-6 col-lg-4 item">
+          <p class="text-center description" style="background-color: #37495B;padding-right: 16px;padding-left: 16px;color: rgb(255,255,255);padding-bottom: 4px;padding-top: 4px;"><br><strong>開催資格</strong><br><br>学生・社会人可<br><br>・経営に興味があるが何をしたらいいか分からない方<br>・やりたいことを叶えるために話を聞いてみたい方<br><br></p>
+        </div>
+      </div>
+    </div>
+    <div id="entry">
+      <h3>DCT Summit 2019 Autumn</h3>
+      <h4 class="orange_line">申し込みフォーム</h4>
+      <div class="contents">
+        <form name="Form1" action="#" method="post" id="formID" onsubmit="return formCheck()">
+          <input type="hidden" value="send" name="mode">
+          <dl>
+            <dt>名前 <span class="need">必須</span></dt>
+            <dd><input type="text" name="name" value="" id="f_name">
+              <p id="notice-input-text-1" style="display: none; color: red;"> 【名前を入力して下さい】</p>
+            </dd>
+          </dl>
+
+          <dl>
+            <dt>メールアドレス <span class="need">必須</span></dt>
+            <dd><input type="text" name="email" id="f_mail">
+              <p id="notice-input-text-2" style="display: none; color: red;"> 【メールアドレスを入力して下さい】</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>所属 <span class="need">必須</span></dt>
+            <dd><input type="text" name="uni" id="f_number">
+              <p id="notice-input-text-3" style="display: none; color: red;"> 【所属を入力して下さい】</p>
+            </dd>
+          </dl>
+          <dl>
+            <dt>意気込み <span class="need">必須</span></dt>
+            <dd>
+              <p id="notice" style="display: none; color: red;"> 【意気込みを入力して下さい】</p>
+              <p><textarea name="text" id="f_text" cols="30" rows="10" class="validate[required]" value="" style="height: 200px;"></textarea>
+              </p>
+            </dd>
+          </dl>
+          <input type="submit" name="btn_confirm" value="入力内容を確認する" id="f_submit">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>>
